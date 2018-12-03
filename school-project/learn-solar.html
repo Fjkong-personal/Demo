@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/indexbasic.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+			body{ 
+   			 background: -webkit-linear-gradient(#caebd3, white);
+   			 background: -moz-linear-gradient(#caebd3, white);
+   			 background: -o-linear-gradient(#caebd3, white);
+   			 background: -webkit-gradient(linear, 0 0, 0 100%, from(#caebd3), to(white));
+   			 background: linear-gradient(#caebd3, white); 
+		}
+			header>nav{
+				background-color: rgba(0,0,0,0);
+				color: black;
+			}
+			header>article{
+				background:url(img/spring.jpg) no-repeat center;
+				background-size: cover;
+				height: 300px;
+				position: relative;
+			}
+			header>article>article{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				margin: 0 auto;
+			}
+			header>article>article>h1{
+				color: white;
+				font-size: 52px;
+				z-index: 999;
+			}
+			header>article>article>h1>span{
+				color: rgba(255,255,255,.8);
+				position: absolute;
+				font-size: 46px;
+				transform: translate(-50%,-50%);
+				z-index: -1;
+				margin-top: -60px;
+				font-weight: bolder;
+				text-shadow: 2px 2px 15px #000000;
+			}
+			main>article{
+				
+				margin: 20px 0;
+			}
+			main>article>article{
+				box-sizing: border-box;
+				height: 100%;
+				margin: 0 auto;
+			}
+			.main-contain{
+				height: 500px;
+				box-sizing: border-box;
+			}
+		    .main-contain>aside{
+		    	float: left;
+		    }
+		    .main-contain>aside>ul>li{
+		    	height: 80px;
+		    	cursor: pointer;
+		    	box-sizing: border-box;
+		    	font-size: 20px;
+		    	line-height: 75px;
+		    	background: url(img/title.png) no-repeat center ;
+		    	background-size: contain;		    	
+		    }
+		    .title-active{
+		    	background: url(img/title-active.png) no-repeat center !important;
+		    	background-size: contain !important;
+		    }
+		    .main-contain>article{
+		    	float: left;
+		    }
+			
+			
+			.main-contain>article>nav>ul{
+				height: 50px;
+				overflow: hidden;
+				border: 1px solid black;
+				box-sizing: border-box;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+			}
+			.main-contain>article>nav>ul>li{
+				line-height: 45px;
+				height: 50px;
+				font-weight: bold;
+				box-sizing: border-box;
+				font-size: 20px;
+				float: left;
+				cursor: pointer;
+			}	
+			.solar-title-active{
+				background-color: black ;
+				color: white;
+			}		
+			.main-contain>article>nav>ul>li:nth-child(2){
+				border-left: 1px solid black;
+				border-right: 1px solid black ;
+			}
+			.main-contain>article>article{
+				height: 450px;
+				box-sizing: border-box;
+				padding: 2px;
+				border: 1px solid black;
+			}
+			.vis-box{
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+				border: 1px solid black;
+				overflow: hidden;
+			}
+			.vis-box>ul{
+				width: 300%;
+				height: 100%;
+			}
+			.vis-box>ul>li{
+				width: 33.33%;
+				height: 100%;
+				float: left;
+				box-sizing: border-box;
+				padding: 10px;
+				text-align: left;
+			}
+			.vis-box>ul>li>h2{
+				margin: 3px;
+				text-align: left;
+			}
+			.vis-box>ul>li:nth-child(1)>h2:before{
+				content: "简介";
+			}
+			.vis-box>ul>li:nth-child(2)>h2:before{
+				content: "养生";
+			}
+			.vis-box>ul>li:nth-child(3)>h2:before{
+				content: "习俗";
+			}
+			.vis-box>ul>li>p{
+				text-indent: 2em;
+				margin: 5px;
+				font-size: 16px;
+			}
+			
+			@media only screen and (max-width: 768px) {
+			header>article{
+				height: 200px;
+			}
+			header>article>article>h1{
+				font-size: 42px;
+			}
+			header>article>article>h1>span{
+				margin-top: -50px;
+				font-size: 36px;
+				
+			}
+			.main-contain{
+				height: auto;
+			}
+			.main-contain>aside{
+				float: none;
+			}
+			.main-contain>aside>ul{
+				height: 100px;
+			}
+			.main-contain>aside>ul>li{
+		    	height: 50px;
+		    	box-sizing: border-box;
+		    	font-size: 16px;
+		    	line-height: 45px;
+		    	background: url(img/title.png) no-repeat center ;
+		    	background-size: contain;
+		    	float: left;		    	
+		    }
+		    .main-contain>article{
+		    	float: none;
+		    	margin: 10px auto;
+		    }
+		    .main-contain>article>article{
+		    	margin: 0 auto;
+		    	height: auto;
+		    }
+			.vis-box>ul{
+				width: 100%;
+				height: auto;
+			}
+			.vis-box>ul>li{
+				width: 100%;
+				float: none;
+			}
+		}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header class="col-lg-12 col-xs-12">
+				<nav class="col-lg-12">
+					<div class="logo col-lg-4"></div>
+					<!--导航切换-->
+					<div class="nav-but  col-xs-visibility col-xs-2 ">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<article class="col-lg-8 col-xs-12  ">
+						<ul class="main-nav  col-xs-12">
+							<li class="col-xs-12 wow slideInRight animated"><a href="index.html">首页</a></li>
+							<li class="col-xs-12  but-menu wow slideInRight animated"><a href="javasctipt:viod(0)">了解节气</a>
+								<ul class="down-menu" style="display: none;">
+									<li><a href="learn-solar.html">春</a></li>
+									<li><a href="learn-solar.html">夏</a></li>
+									<li><a href="learn-solar.html">秋</a></li>
+									<li><a href="learn-solar.html">冬</a></li>
+								</ul>
+							</li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="solar-poet.html">节气诗歌</a></li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="aboutsolar.html">关于节气</a></li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="login.html">登录/注册</a></li>
+						</ul>
+					</article>
+				</nav>
+				<article class="col-lg-12">
+					<article>
+						<h1>
+							春
+						<span>spring</span>
+						</h1>	
+					</article>
+				</article>
+			</header>
+			<article class="col-lg-12">
+				<article class="col-lg-8 col-xs-10">
+					<div class="main-contain">
+						<aside class="col-lg-2 col-xs-12">
+							<ul>
+								<li class="title-active col-xs-4">立春</li>
+								<li class="col-xs-4">雨水</li>
+								<li class="col-xs-4">惊蛰</li>
+								<li class="col-xs-4">春分</li>
+								<li class="col-xs-4">清明</li>
+								<li class="col-xs-4">谷雨</li>
+							</ul>
+						</aside>
+						<article class="col-lg-10 col-xs-12">
+							<nav class="col-lg-visibility">
+								<ul>
+									<li class="col-lg-4 solar-title-active">简介</li>
+									<li  class="col-lg-4">养生</li>
+									<li  class="col-lg-4">习俗</li>
+								</ul>
+							</nav>
+							<article class="col-xs-12">
+								<div class="vis-box">
+									<ul>
+										<li>
+											<h2></h2>
+											<p>立春，是二十四节气中的第一个节气，明清官方历书中被归入正月节气；到达时间点在公历每年2月3-5日（农历正月初一前后），太阳到达黄经315°时。
+											</p>
+											<p>立春是汉族民间重要的传统节日之一。“立”是“开始”的意思，自秦代以来，中国就一直以立春作为春季的开始。立春是从天文上来划分的，春是温暖，鸟语花香；春是生长，耕耘播种。从立春交节当日一直到立夏前这段期间，都被称为春天。</p>
+											<p>所谓“一年之计在于春”，自古以来立春就是一个重大节日，叫春节（到民国后被易名）。中国自官方到民间都极为重视，立春之日迎春已有三千多年历史。立春时天子亲率三公九卿、诸侯大夫去东郊迎春，祈求丰收。回来之后，要赏赐群臣，布德令以施惠兆民。这种活动影响到庶民，使之成为后来世世代代的全民的迎春活动。</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>在养生上主要是护肝。在作息时间上，人们也应顺应自然界的规律，早睡早起。在精神养生方面，要力戒暴怒，更忌忧郁，做到心胸开阔，保持心境愉悦。</p>
+											<p>对于健康人群而言，饮食要清淡，不要过度食用干燥、辛辣的食物。同时，因为此时阳气上升容易伤阴，所以要特别注重养阴，可以多选用百合、山药、莲子、枸杞等食物。</p>
+											<p>立春之后的一段时间往往冷暖不定，要当心“倒春寒”的侵扰，特别是对于体弱的人来说，感冒、发烧是常有的事情。对此专家表示，要想杀菌并防寒，在饮食上可增加吃大蒜、洋葱、芹菜等“味冲”食物的次数，对预防伤寒感冒等春季多发的呼吸道感染大有益处。</p>
+											<p>
+中医认为，洋葱、姜、蒜、芹菜这些带味食物，既可疏风散寒，又能杀菌防病。其中，大蒜含有挥发性辣素，可消除积存在血管中的脂肪。洋葱含有前列腺素，有舒张血管及降低血压的功能，还有促使血凝块溶解的作用。芹菜含有挥发油、甘露醇等，具有降压、镇静、健胃、利尿等作用。不过，儿童可能会对这类食物有些抵触，这时可把芹菜、姜末做饺子馅吃，也可以用碎洋葱来炒饭。此外，将洋葱、蒜、芹菜等加热时间长一些可减少气味，但烹饪时间越长，气味儿中的健康物质保留越少。</p>
+											<p>立春之后依然比较干燥，喝花茶可以帮助驱散冬季聚积在人体内的寒气和邪气。由于每一种花、草都有其相应的性、味、功效，如果使用得当，花草茶的确有一定的保健疗效，但需根据自身的体质进行调整，饮用过量也会造成身体不适。性温的食用花草主要包括梅花、茉莉花、玫瑰花、月季花、藏红花等；性寒的食用花草主要有夏枯草、金银花、菊花、槐花等；性平的花草主要有合欢花、玉米须、芙蓉花、薰衣草等。在搭配时，那些药性温的花草最好不要和性寒的花草配伍食用。</p>
+											<p>
+除了药性搭配，喝花草茶还需注意身体状况。每一种花草茶都有特别的功效，所以在选择时，一方面需分清自己的体质情况，如热性体质的人，宜选用性寒的花草，而虚寒体质的人则适用性温的花草，对于那些性平的花草则大多都可选用。此外，如果正在服用药物，选用花草茶更应慎重。</p>
+										</li>
+										<li>
+											<h2></h2>
+											
+										<p>春耕：春耕秋狩，周礼天子亲率三公九卿诸侯大夫，到东郊迎春，并举行祭祀句芒神的仪式，(见《礼祀·月令》)。汉代仍承此俗。《后汉书·祭祀志》：后世延续。</p>
+										<p>打春：民间扎春牛，用鞭打之，谓之打春。</p>
+			
+										<p>春社：民间游行舞龙，糊春牛，祭祀社神，并占新春气候，占风向，望云气，占岁成。</p>
+										
+										<p>朝贺：《梦梁录》：立春日宰臣以下入朝称贺。文武百官，觐见天子，齐呼万岁。</p>
+										
+										<p>周礼设春官。周礼天子要亲自象征性的耕种，表示春回大地，天下可以恢复生产耕种的信号。</p>
+										
+										<p>春游：民间要踏春，妇女戴春胜。</p>
+										
+										<p>咬春：要吃春盘，春饼，春卷，春盒，吃生菜，吃萝卜，谓之“咬春”</p>
+											
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<h2></h2>
+											<p>雨水是24节气中的第2个节气。每年的正月十五前后(公历2月18-20日)，太阳黄经达330度时，是二十四节气的雨水。此时，气温回升、冰雪融化、降水增多，故取名为雨水。雨水节气时段一般从公历2月18日或19日开始，到3月4日或5日结束。雨水和谷雨、小雪、大雪一样，都是反映降水现象的节气。</p>
+											<p>《月令七十二候集解》:"正月中，天一生水。春始属木，然生木者必水也，故立春后继之雨水。且东风既解冻，则散而为雨矣。"意思是说，雨水节气前后，万物开始萌动，春天就要到了。如在《逸周书》中就有雨水节后"鸿雁来""草木萌动"等物候记载。</p>
+
+										</li>
+										<li>
+											<h2></h2>
+											<p>在雨水节气之后，随着降雨有所增多，寒湿之邪最易困着脾脏。同时湿邪留恋，难以去除，故雨水前后应当着重养护脾脏。雨水节气中，地湿之气渐升，且早晨时有露、霜出现。所以针对这样的气候特点，饮食调养应侧重于调养脾胃和祛风除湿。又由于此时气候较阴冷，可以适当地进补，如蜂蜜、大枣、山药、银耳等都是适合这一节气的补品。</p>
+											<p>这种变化无常的天气，容易引起人的情绪波动，乃至心神不安，影响人的身心健康，对高血压、心脏病、哮喘患者更是不利。为了消除这些不利的因素，除了应当继续进行春捂外，应采取积极的精神调摄养生锻炼法。保持情绪稳定对身心健康有着十分重要的作用。</p>
+											<p>　雨水后，春风送暖，致病的细菌、病毒易随风传播，故春季传染病常易暴发流行。每个人应该保护好自己，注意锻炼身体，增强抵抗力，预防疾病的发生。
+</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>民间到了雨水节，出嫁的女儿纷纷带上礼物回娘家拜望父母。生育了孩子的妇女，须带上罐罐肉、椅子等礼物，感谢父母的养育之恩。久不怀孕的妇女，则由母亲为其缝制一条红裤子，穿到贴身处，据说，这样可使其尽快怀孕生子。此项风俗现仍在农村流行。</p>
+											<p>雨水这天在民间还有一项特具风趣的活动叫“拉保保”。(保保则是干爹）。而雨水节拉干爹，意取“雨露滋润易生长”之意。</p>
+											<p>　以前人们都有一个为自己儿女求神问卦的习惯，看看自己儿女命相如何，需不需要找个干爹。而找干爹的目的，则是为了让儿子或女儿顺利，健康的成长。于是便有了雨水节拉保保的活动。此举一年复一年，久而成为一方之俗。</p>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<h2></h2>
+											<p>惊蛰，古称"启蛰"，是二十四节气中的第3个节气，更是干支历卯月的起始;时间点在公历3月5-6日之间，太阳到达黄经345°时。《月令七十二候集解》:"二月节……万物出乎震，震为雷，故曰惊蛰，是蛰虫惊而出走矣。"
+											</p>
+											<p>惊蛰时间在公历3月5-6日之间这是正确的。以前有人说"时间点在农历每年二月初一前后"，这是不对的，农历与公历日期是较大的出入。</p>
+											<p>这时天气转暖，渐有春雷，动物入冬藏伏土中，不饮不食，称为"蛰"，而"惊蛰"即上天以打雷惊醒蛰居动物的日子。这时中国大部分地区进入春耕季节。</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>惊蛰时节饮食起居应顺肝之性，助益脾气，令五脏和平。宜多吃富含植物蛋白质、维生素的清淡食物，少食动物脂肪类食物。可多食鸭血、菠菜、芦荟、水萝卜、苦瓜、木耳菜、芹菜、油菜、山药、莲子、银耳等食物。</p>
+											<p>由于春季与肝相应，如养生不当则可伤肝。现代流行病学调查亦证实，惊蛰属肝病的高发季节。此外，诸如流感、流脑、水痘、带状疱疹、流行性出血热等在这一节气都易流行爆发，因此要严防此类疾病。</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>中国的民间传说白虎是口舌、是非之神，每年都会在这天出来觅食，开口噬人，犯之则在这年之内，常遭邪恶小人对你兴波作浪，阻挠你的前程发展，引致百般不顺。大家为了自保，便在惊蛰那天祭白虎。</p>
+											<p>所谓祭白虎，是指拜祭用纸绘制的白老虎，纸老虎一般为黄色黑斑纹，口角画有一对獠牙。拜祭时，需以肥猪血喂之，使其吃饱后不再出口伤人，继而以生猪肉抹在纸老虎的嘴上，使之充满油水，不能张口说人是非。</p>
+											<p>惊蛰象征二月份的开始，会平地一声雷，唤醒所有冬眠中的蛇虫鼠蚁，家中的爬虫走蚁又会应声而起，四处觅食。所以古时惊蛰当日，人们会手持清香、艾草，熏家中四角，以香味驱赶蛇、虫、蚊、鼠和霉味，久而久之，渐渐演变成不顺心者拍打对头人和驱赶霉运的习惯，亦即“打小人”的前身。</p>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<h2></h2>
+											<p>春分，是春季九十天的中分点。二十四节气之一，每年农历二月初五日前后(公历大约为3月20-21日期间)，太阳位于黄经0°(春分点)时。春分这一天太阳直射地球赤道，南北半球季节相反，北半球是春分，在南半球来说就是秋分。春分是伊朗、土耳其、阿富汗、乌兹别克斯坦等国的新年，有着3000年的历史。</p>
+											<p>春分也是节日和祭祀庆典，古代帝王有春天祭日，秋天祭月的礼制。周礼天子日坛祭日。《月令七十二候集解》：“二月中，分者半也，此当九十日之半，故谓之分。”另《春秋繁露·阴阳出入上下篇》说：“春分者，阴阳相半也，故昼夜均而寒暑平。”</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>由于春分节气平分了昼夜、寒暑，人们在保健养生时应注意保持人体的阴阳平衡状态。</p>									
+
+											<p>在此节气的饮食调养，应当根据自己的实际情况选择能够保持机体功能协调平衡的膳食，禁忌偏热、偏寒、偏升、偏降的饮食误区，如在烹调鱼、虾、蟹等寒性食物时，其原则必佐以葱、姜、酒、醋类温性调料，以防止本菜肴性寒偏凉，食后有损脾胃而引起脘腹不舒之弊。
+</p>
+										</li>
+										<li>
+											<h2></h2>
+										<p>
+											1.竖蛋：春分成了竖蛋游戏的最佳时光，故有“春分到，蛋儿俏”的说法。</p>
+
+　　										<p>2.吃春菜：“春分吃春菜”。“春菜”是一种野苋菜，乡人称之为“春碧蒿”。逢春分那天采回的春菜一般家里与鱼片“滚汤”，名曰“春汤”。</p>
+
+　　										<p>3.送春牛：春分随之即到，其时便出现挨家送春牛图的。其图是把二开红纸或黄纸印上全年农历节气，还要印上农夫耕田图样，名曰“春牛图”。</p>
+
+　　										<p>4.粘雀子嘴：春分这一天农民都按习俗放假，每家都要吃汤元，而且还要把不用包心的汤元十多个或二三十个煮好，用细竹叉扦着置于室外田边地坎，名曰粘雀子嘴，免得雀子来破坏庄稼。</p>
+
+　										<p>5.春祭：二月春分，开始扫墓祭祖，也叫春祭。扫墓前先要在祠堂举行隆重的祭祖仪式，杀猪、宰羊，请鼓手吹奏，由礼生念祭文，带引行三献礼。</p>
+
+　　										<p>6.祭日：在周代，春分有祭日仪式。此俗历代相传。清潘荣陛《帝京岁时纪胜》：“春分祭日，秋分祭月，乃国之大典，士民不得擅祀。”</p>
+										</span>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<h2></h2>
+											<p>清明节是我国传统节日，也是最重要的祭祀节日，是祭祖和扫墓的日子。扫墓俗称上坟，祭祀死者的一种活动。汉族和一些少数民族大多都是在清明节扫墓。</p>
+											<p>　清明节，又叫踏青节，按阳历来说，它是在每年的4月4日至6日之间，正是春光明媚草木吐绿的时节，也正是人们春游（古代叫踏青）的好时候，所以古人有清明踏青，并开展一系列体育活动的习俗。在古时，还有一种说法，就是“三月节”。</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>就中医养生来讲，清明是一个尤为重要的节气。中医认为人应四时，春季万物生长，机体也是如此。从中医来说，吐纳调息法对人体阳气有益。因此，建议大家穿着宽松衣服多到空气清新之处，比如公园、广场、树林、山坡等地慢走、打拳、做操，尽量多活动，使阳气增长有路。</p>
+											<p>而立春之后，体内肝气随着春日渐深而愈盛，在清明之际达到最旺。常言道过犹不及，如果肝气过旺，会对脾胃产生不良影响，妨碍食物正常消化吸收，还可造成情绪失调、气血运行不畅，从而引发各种疾病。这段时间是高血压病和呼吸系统疾病的高发期，要予以重视。</p>
+											<p>清明时节的饮食宜温，应多吃些蔬菜水果，尤其是韭菜等时令蔬菜，还有白菜、萝卜等也适宜多吃。另外，清明节气中可多吃些护肝养肺的食品，比如荠菜、菠菜、山药，对身体有好处。</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>清明节的习俗是丰富有趣的，除了讲究禁火、扫墓,还有踏青、荡秋千、踢蹴鞠、打马球、插柳等一系列风俗体育活动。</p>
+											<p>相传清明节扫墓这是因为寒食节要寒食禁火，为了防止寒食冷餐伤身，所以大家来参加一些体育活动，以锻炼身体。</p>
+											<p>清明节，民间忌使针，忌洗衣，大部分地区妇女忌行路。傍晚以前，要在大门前洒一条灰线，据说可以阻止鬼魂进宅。</p>
+											<p>因此，这个节日中既有祭扫新坟生离死别的悲酸泪，又有踏青游玩的欢笑声，是一个富有特色的节日。	</p>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<h2></h2>
+											<p>谷雨是二十四节气的第六个节气，也是春季最后一个节气，每年4月19日~21日时太阳到达黄经30°时为谷雨，源自古人"雨生百谷"之说。同时也是播种移苗、埯瓜点豆的最佳时节。</p>		
+											<p>
+"清明断雪，谷雨断霜"，气象专家表示，谷雨是春季最后一个节气，谷雨节气的到来意味着寒潮天气基本结束，气温回升加快，大大有利于谷类农作物的生长。</p>
+										</li>
+										
+										<li>
+											<h2></h2>
+											<p>谷雨到来，暮春到了，万物生长渐旺，天气也渐热。中午气温较高，但早晚气温仍较低，因此早晚时要适当加穿衣服，尤其要注意切勿大汗后吹风，以防感冒；过敏体质的人外出时还要预防花粉过敏，预防过敏性鼻炎、过敏性哮喘等的发作。</p>
+											<p>此时阳气渐长，阴气渐消，要早睡早起，不要过度出汗，以调养脏气。另外，由于谷雨时节雨水较多，要防湿邪侵入人体，出现肩颈痛、关节疼痛、脘腹胀满、不欲饮食等病症。</p>
+											<p>此时，肝脏气伏，心气逐渐旺盛，脾气也处于旺盛时期，正是身体补益的大好时机，但不能像冬天一样进补，应当食用一些益肝补肾的食物，以顺应阴阳的变化，为安然度过盛夏打下基础。</p>
+										</li>
+										<li>
+											<h2></h2>
+											<p>1.清禁杀五毒：谷雨以后气温升高，病虫害进入高繁衍期，为了减轻病虫害对作物及人的伤害，农家一边进田灭虫，一边张贴谷雨贴，进行驱凶纳吉的祈祷。</p>
+											<p>2.渔家流行谷雨祭海：谷雨时节正是春海水暖之时，百鱼行至浅海地带，是下海捕鱼的好日子。俗话说“骑着谷雨上网场”。为了能够出海平安、满载而归，谷雨这天渔民要举行海祭，祈祷海神保佑。</p>
+											<p>3.走谷雨：古时有“走谷雨”的风俗，谷雨这天青年妇女走村串亲，或者到野外走走，寓意与自然相融合，强身健体。</p>
+											<p>4.喝谷雨茶：传说谷雨这天的茶喝了会清火，辟邪，明目等，所以南方有谷雨摘茶习俗。</p>
+											<p>5.食香椿：北方则有谷雨食香椿的习俗。</p>
+											<p>6.祭祀文祖仓颉：“谷雨祭仓颉”，是自汉代以来流传千年的民间传统。</p>
+											<p>7.洗澡消灾避祸：在西北地区，旧时，人们将谷雨的河水称为“桃花水”，传说以它洗浴，可消灾避祸。</p>
+										</li>
+									</ul>
+								</div>
+							</article>
+						</article>
+					</div>
+				</article>
+			</article>
+			<footer class="col-lg-12">
+				<p class="col-lg-8">Copyright © 2013-2018</p>
+				<p class="col-lg-8">粤网文[2017]6527-1578号</p>
+			</footer>
+		</main>
+	</body>
+	<script type="text/javascript">
+		//navbut
+		$(function(){
+			var nav_but_num=0;
+			$(".nav-but").click(function(){
+				if(nav_but_num<2){
+					nav_but_num++;
+				}
+				else{
+					nav_but_num=1;
+				}
+				if(nav_but_num%2==0){
+					$(this).css({
+						"border": "3px white solid",
+						"background-color":"rgba(0,0,0,0)"
+					})
+					}else{
+						$(this).css({
+							"border": "3px grey solid",
+						"background-color":"gainsboro"						
+					})		
+					}
+				$("nav>article").toggle();
+			});
+				$(".but-menu").click(function(){
+				$(".down-menu").slideToggle();
+			});
+				$(".but-menu").mouseleave(function(){
+					$(".down-menu").css({"display":"none"})
+				})
+			
+		})
+		//点解切换内容
+		
+		var vis_width=$('.vis-box>ul>li').innerWidth();
+		$('.vis-box>ul').first().show().siblings().hide();
+		$('.main-contain>aside>ul>li').click(function(){
+			var main_index=$(this).index();
+			$(this).addClass('title-active').siblings().removeClass('title-active')
+			$('.vis-box>ul').eq(main_index).fadeIn().siblings().fadeOut();
+		})
+		$('.main-contain>article>nav>ul>li').click(function(){
+			var main_off_index=$(this).index();
+			$('.vis-box>ul').css({
+				"transform":'translateX(-'+vis_width*main_off_index+'px)',
+				'transition':'all .5s'
+			})
+			$(this).addClass('solar-title-active').siblings().removeClass('solar-title-active')
+			
+		})
+	</script>
+</html>

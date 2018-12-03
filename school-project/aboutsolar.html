@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/indexbasic.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		body{ 
+   			 background: -webkit-linear-gradient(#caebd3, white);
+   			 background: -moz-linear-gradient(#caebd3, white);
+   			 background: -o-linear-gradient(#caebd3, white);
+   			 background: -webkit-gradient(linear, 0 0, 0 100%, from(#caebd3), to(white));
+   			 background: linear-gradient(#caebd3, white); 
+		}
+			header>article{
+				background: url(img/about-sbg.jpg) no-repeat center;
+				background-size: cover;
+				height: 300px;
+				position: relative;
+			}
+			header>article>article{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				margin: 0 auto;
+			}
+			header>article>article>h1{
+				color: white;
+				font-size: 52px;
+				z-index: 999;
+			}
+			header>article>article>h1>span{
+				width: 300px;
+				color: rgba(255,255,255,.8);
+				position: absolute;
+				font-size: 46px;
+				transform: translate(-50%,-50%);
+				z-index: -1;
+				margin-top: -60px;
+				font-weight: bolder;
+				text-shadow: 2px 2px 15px #000000;
+			}
+			main>article{
+				position: relative;
+			}
+			main>article>aside{				
+				left: 10%;
+				
+				text-align: left;
+				font-size: 14px;
+				position: fixed;
+				height: 200px;
+				
+			}
+			main>article>aside>article{
+				width: 180px;
+				overflow: hidden;
+			}
+			main>article>aside>article>div{
+				width: 100%;
+				text-align: center;
+				height: 25px;
+				line-height: 22px;
+				background-color: black;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				color: white;
+			}
+			main>article>aside>aside{
+				top: 50%;
+				left: 100%;
+				transform: translateY(-50%);
+				position: absolute;
+				width: 24px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 45px;
+				border-radius: 0 8px 8px 0;
+				color: white;
+				box-sizing: border-box;
+				padding-left: 2px;
+				cursor: pointer;
+				background-color: black;
+				border: 1px solid black;
+			}
+			main>article>aside>article>ul{
+				box-sizing: border-box;
+				padding: 10px;
+				background-color: white;
+				border: 1px solid black;
+				border-radius:0 0 8px 8px;
+			}
+			main>article>aside>article>ul>li{
+				margin: 5px 0;
+				cursor: pointer;
+			}
+			main>article>article{
+				text-align: left;
+				box-sizing: border-box;	
+				padding: 5px;
+				margin: 40px auto;
+				border: 2px solid black;
+			}
+			main>article>article>ul{
+				border: 2px solid black;
+				box-sizing: border-box;
+				padding: 20px;
+			}
+			main>article>article>ul>li{
+				margin: 10px 0;
+			}
+			main>article>article>ul>li>h2{
+				margin: 15px 20px;
+				
+			}
+			main>article>article>ul>li>p{
+				text-indent: 2em;
+			}
+			main>article>article>ul>li:nth-last-child(2)>p{
+				text-indent:0em;
+			}
+			
+			
+			
+			
+			@media only screen and (max-width: 768px) {
+			main>header{
+					height: 200px;
+			}
+				
+			header>article{
+					height: 200px;
+					
+			}
+			header>article>article>h1{
+				font-size: 36px;
+			}
+			header>article>article>h1>span{
+				margin-top: -50px;
+				font-size: 30px;
+				
+			}
+			main>article>div>article>h1{
+				font-size: 45px;
+			}
+			header>article>article>h1>span{
+				width: 250px;
+			}
+			main>article>div>article{
+				height: 180px;
+			}
+			
+			main>article>article{
+				padding: 3px;
+				border-width: 1px;
+			}
+			main>article>article>ul{
+				padding: 5px;
+				border-width: 1px;
+			}
+			main>article>article>ul>li>h2{
+				margin: 10px 0;
+				font-size: 1.2em;
+				
+			}
+			main>article>aside{
+				top: 10%;
+				left: 0;
+			}
+			main>article>aside>article{
+				width: 0;
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header class="col-lg-12 col-xs-12">
+				<nav class="col-lg-12">
+					<div class="logo col-lg-4"></div>
+					<!--导航切换-->
+					<div class="nav-but  col-xs-visibility col-xs-2 ">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<article class="col-lg-8 col-xs-12  ">
+						<ul class="main-nav  col-xs-12">
+							<li class="col-xs-12 wow slideInRight animated"><a href="index.html">首页</a></li>
+							<li class="col-xs-12  but-menu wow slideInRight animated"><a href="javasctipt:viod(0)">了解节气</a>
+								<ul class="down-menu" style="display: none;">
+									<li><a href="learn-solar.html">春</a></li>
+									<li><a href="learn-solar.html">夏</a></li>
+									<li><a href="learn-solar.html">秋</a></li>
+									<li><a href="learn-solar.html">冬</a></li>
+								</ul>
+							</li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="solar-poet.html">节气诗歌</a></li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="aboutsolar.html">关于节气</a></li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="login.html">登录/注册</a></li>
+						</ul>
+					</article>
+				</nav>
+				<article class="col-lg-12">
+					<article>
+						<h1>
+							关于节气
+						<span>about solar</span>
+						</h1>	
+					</article>
+				</article>
+			</header>
+			<article class="col-lg-12">
+				<aside>
+					<article>
+						<div id="">
+							节气目录
+						</div>
+						<ul>
+							<li>二十四节气介绍</li>
+							<li>二十四节气的定制</li>
+							<li>二十四节气的意义与命名</li>
+							<li>二十四节气的背诵方法</li>
+							<li>二十四节气的推算</li>
+							<li>二十四节气可分为四类</li>
+							<li>十二个月的农作物</li>
+						</ul>
+					</article>
+					<aside class="col-xs-visibility">></aside>
+				</aside>
+				<article class="col-lg-6 col-xs-8">
+					<ul>
+						<li>
+							<h2>二十四节气介绍</h2>
+							<p>
+								「种田无定例，全靠著节气。」我国民间自古普遍流传这句俗语，至今未改，可见节气受到一般农民重视的程度，二十四节气是我国古代历法家所独创，用来指示一年中气候寒暑变化的週期，以补救我国以前使用阴历日期，无法配合季节变化的缺点，古代农民由长期的生活经验中得知，农业与季节有著十分密切的关係，因此他们只要看一下当时是处於那个节气，便可瞭解此段时期的气候状态，适时的进行农事，以免气候產物与季候变化脱节而影响收成，因此节气对农业社会的人而言，它与春耕、夏耘、秋收、冬藏等农事息息相关，同时亦是生活起居不可或缺的准则。字，点击转换按钮，就能转换为繁体字。
+							</p>
+						</li>
+						<li>
+							<h2>二十四节气的定制</h2>
+							<p>
+								古代人们注意到一年四季中，在不同季节所见到中午时太阳的位置，其仰角的高低并不相同，人们在地上竖立一根竹竿，根据全年观测的结果发现，夏季时其阴影似乎较短，冬季时则较长，显然随著季节的变化，竹竿受阳光照射造成的阴影，其长短会跟著变化，因此取中午时竿影最短的那天为夏至〈至就是到顶的意思〉，又称日北至或日长至，取竿影最长的那天为冬至，又称日南至或日短至，大约殷商时人们已知道立竿测影来定季节，另外在春秋两季裡发现，各有一天昼夜时间相等，便定这两天为春分和秋分，据左传中记载春秋时期已经提到在二分二至时做观测，有了二分二至以后，虽有利於农业生產的安排，但一年中气候变化很大，且二分二至之间相隔时间很长，必然无法满足农民生產上的实际需要，因此陆续又制订了一些节气，按推测一定是先增加四季的开始，即是合称四立的立春、立夏、立秋、立冬，四立与二分二至称为 「分至啟闭」，亦称为八节，随著农业的发展，指导农事所需的节气数目越来越多，到了秦代在吕不韦的吕氏春秋中已经载有立春、雨水、立夏、小暑、立秋、处暑、白露、霜降等节气名称，到了两汉时期，由於农业已有进一步的发展，在淮南王刘安的淮南子书中的天文训篇裡，二十四节气已齐备且和现在的名称完全相同，由此可断定在两汉时二十四节气就已完备了。
+							</p>
+						</li>
+						<li>
+							<h2>二十四节气的意义与命名</h2>
+							<p>
+								地球绕日公转时，地轴是倾斜著运行，地球赤道与公转轨道面有二十三五度的交角，因此以地球上某一个地区而言，地球在公转轨道上各个不同位置，受到阳光的照射量因直射或斜射而多寡不同，阳光直射时，该地区接受到的光和热就较多，气候就会热，阳光斜射时，该地区接受到的光和热就较少，气候就会冷。二十四节气简单的说就是地球绕日公转轨道上的二十四个点，好比公转轨道上的里程标誌，到了甚麼节气，就会有甚麼气候，以反映一年中各个不同时期的气候寒暑变化。由於秦汉时代的领域大都在中原附近，亦即大抵位於黄河流域，因此二十四节气的名称，除了四立与分至合称的八节，表示季节变换及划分四季外，都是反映该地区的气候寒暑变化及耕耘播种之农时等来命名，相当具有与农业生產紧密结合的特点。
+							</p>
+						</li>
+						<li>
+							<h2>二十四节气的背诵方法</h2>
+							<p>
+								二十四节气的名称分别是立春、雨水、惊蛰、春分、清明、穀雨、立夏、小满、芒种、夏至、小暑、大暑、立秋、处暑、白露、秋分、寒露、霜降、立冬、小雪、大雪、冬至、小寒、大寒。为了便於记忆二十四节气的名称及顺序，取二十四节气中每个节气一或二个字编成的歌诀：<br />
+								春雨惊春清谷天，<br />
+								夏满芒夏暑相连。<br />
+								秋处露秋寒霜降，<br />
+								冬雪雪冬小大寒。<br />
+								又因为二十四节气在阳历上的日期变动不大，故亦有人将二十四节气在阳历上的日期，编有「上半年逢六、二十一，下半年逢八、二十三，前后不过一、二天。」的口诀，例如民国八十八年立春在二月四日，夏至在六月二十二日，立秋在八月八日，冬至在十二月二十二日，记得上述歌诀和口诀，就能知道各节气的名称和在阳历的大概日期。
+							</p>
+						</li>
+						<li>
+							<h2>二十四节气的推算</h2>
+							<p>
+								二十四节气时间的推算，古代的方法是将该年冬至到次一年冬至整个回归年的时间，平分为十二等分，每个分点称为中气，再将二个中气间长度等分，其分点称为节气，十二个中气加十二个节气，俗名统称二十四节气，此种将一年平分二十四等分所得的节气称为平节气，但由於地球绕日公转轨道是椭圆形，地球在轨道上运行的速率并不是等速，以二十四等分回归年时间所得平节气的日期，并不能反映地球在轨道上真正的位置，因此从清初的时宪历〈西元一六四五年〉起，节气时刻的推算由平节气改为定节气，所谓定节气是由春分开始，将地 球公转太阳的轨道每十五度定一节气，一周三百六十度共有二十四节气，以此方法推算出来的节气日期，更能表示地球在公转轨道上的位置，反映当时的气候状况。
+							</p>
+						</li>
+						<li>
+							<h2>二十四节气可分为四类</h2>
+							<p>
+								表示寒来暑往变化：立春、春分；立夏、夏至；立秋、秋分；立冬、冬至。<br />
+								象徵气温变化：小暑、大暑、处暑、小寒、大寒。<br />
+								反映降水量：雨水、穀雨、白露、寒露、霜降、小雪、 大雪。<br />
+								反应物候现象或农事活动：惊蛰、清明、小满、芒种。<br />
+							</p>
+						</li>
+						<li>
+							<h2>十二个月的农作物</h2>
+							<p>正月葱、二月韭、三月莧、四月蕹、五月匏、六月瓜、七月笋、八月芋、九芥蓝、十芹菜、十一蒜、十二白。中国农民农事活动的安排，有了各种节气定律做为依循，只要「不违农时」，必然五榖丰收，物阜民丰，民族续存，命脉自得绵延、扩张，可见各种的节令与农村间的关係密切。</p>
+						</li>
+					</ul>
+				</article>
+			</article>
+			<footer class="col-lg-12">
+				<p class="col-lg-8">Copyright © 2013-2018</p>
+				<p class="col-lg-8">粤网文[2017]6527-1578号</p>
+			</footer>
+		</main>
+	</body>
+	<script type="text/javascript">
+		//navbut
+		$(function(){
+			var nav_but_num=0;
+			$(".nav-but").click(function(){
+				if(nav_but_num<2){
+					nav_but_num++;
+				}
+				else{
+					nav_but_num=1;
+				}
+				if(nav_but_num%2==0){
+					$(this).css({
+						"border": "3px white solid",
+						"background-color":"rgba(0,0,0,0)"
+					})
+					}else{
+						$(this).css({
+							"border": "3px grey solid",
+						"background-color":"gainsboro"						
+					})		
+					}
+				$("nav>article").toggle();
+			});
+				$(".but-menu").click(function(){
+				$(".down-menu").slideToggle();
+			});
+				$(".but-menu").mouseleave(function(){
+					$(".down-menu").css({"display":"none"})
+				})
+			
+		})
+		
+		//滚动监听
+		$(function(){
+			$("main>article>aside>article>ul>li").click(function(){
+				var index_=$(this).index();
+				$("html,body").animate({
+					scrollTop:$("main>article>article>ul>li").eq(index_).offset().top},200);
+			})
+			$("main>article>aside>aside").click(function(){
+				$('main>article>aside>article').toggle().animate({
+					'width':'180px'
+				},200)	
+			})
+//			$(window).scroll(function(){
+//				var top=$("main>article>aside").offset().top;
+//				var wint=$(window).scrollTop();
+//			if(wint>top){
+//				$("main>article>aside").css({
+//					"position":"fixed",
+//					"top":"0%"
+//				})
+//				}else{
+//					$("main>article>aside").css({
+//					'left': '10%',
+//					'position': 'absolute'
+//				})
+//			}
+//			})
+	})
+		new WOW().init();
+		
+	</script>
+</html>

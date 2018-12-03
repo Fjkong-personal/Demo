@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/indexbasic.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		body{ 
+   			 background: -webkit-linear-gradient(#caebd3, white);
+   			 background: -moz-linear-gradient(#caebd3, white);
+   			 background: -o-linear-gradient(#caebd3, white);
+   			 background: -webkit-gradient(linear, 0 0, 0 100%, from(#caebd3), to(white));
+   			 background: linear-gradient(#caebd3, white); 
+		}
+		main>header{
+			height: 300px;
+		}
+			header>article{
+				background: url(img/poetbg.jpg) no-repeat center;
+				background-size: cover;
+				height: 300px;
+				position: relative;
+			}
+			header>article>article{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				margin: 0 auto;
+			}
+			header>article>article>h1{
+				color: white;
+				font-size: 52px;
+				z-index: 999;
+			}
+			header>article>article>h1>span{
+				color: rgba(255,255,255,.8);
+				position: absolute;
+				font-size: 46px;
+				transform: translate(-50%,-50%);
+				z-index: -1;
+				margin-top: -60px;
+				font-weight: bolder;
+				text-shadow: 2px 2px 15px #000000;
+			}
+			main>article{
+				margin-top: 50px;
+			}
+			main>article>div{
+				margin: 0 auto;
+			}
+			main>article>div>article{
+				height: 200px;
+				margin: 20px 0;
+				box-shadow: 2px 2px 20px black;
+				position: relative;
+				border-radius: 8px;
+				cursor: pointer;
+				
+			}
+			
+			main>article>div>article:nth-child(1){
+				background: url(img/poet-art1.jpg) center no-repeat;
+				background-size: cover;
+			}
+			main>article>div>article:nth-child(2){
+				background: url(img/bgsm.jpg) center no-repeat;
+				background-size: cover;
+			}
+			main>article>div>article:nth-child(3){
+				background: url(img/poet-art3.jpg) center no-repeat;
+				background-size: cover;
+			}
+			main>article>div>article:nth-child(4){
+				background: url(img/poet-art4.jpg) center no-repeat;
+				background-size: cover;
+			}
+			
+			main>article>div>article>h1{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				color: white;
+				font-size: 54px;
+				
+			}
+			
+			@media only screen and (max-width: 768px) {
+				main>header{
+			height: 200px;
+		}
+				
+			header>article{
+					height: 200px;
+					
+				}
+				header>article>article>h1{
+				font-size: 42px;
+			}
+			header>article>article>h1>span{
+				margin-top: -50px;
+				font-size: 36px;
+				
+			}
+			main>article>div>article>h1{
+				font-size: 30px;
+			}
+			main>article>div>article{
+				height: 180px;
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header class="col-lg-12 col-xs-12">
+				<nav class="col-lg-12">
+					<div class="logo col-lg-4"></div>
+					<!--导航切换-->
+					<div class="nav-but  col-xs-visibility col-xs-2 ">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<article class="col-lg-8 col-xs-12  ">
+						<ul class="main-nav  col-xs-12">
+							<li class="col-xs-12 wow slideInRight animated"><a href="index.html">首页</a></li>
+							<li class="col-xs-12  but-menu wow slideInRight animated"><a href="javasctipt:viod(0)">了解节气</a>
+								<ul class="down-menu" style="display: none;">
+									<li><a href="learn-solar.html">春</a></li>
+									<li><a href="learn-solar.html">夏</a></li>
+									<li><a href="learn-solar.html">秋</a></li>
+									<li><a href="learn-solar.html">冬</a></li>
+								</ul>
+							</li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="solar-poet.html">节气诗歌</a></li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="aboutsolar.html">关于节气</a></li>
+							<li class="col-xs-12 wow slideInRight animated"><a href="login.html">登录/注册</a></li>
+						</ul>
+					</article>
+				</nav>
+				<article class="col-lg-12">
+					<article>
+						<h1>
+							诗歌
+						<span>poety</span>
+						</h1>	
+					</article>
+				</article>
+			</header>
+			<article class="col-lg-12">
+				<div class="col-lg-8">
+					<article class="col-lg-12  animated bounceInLeft "><h1>节气歌</h1></article>
+					<article class="col-lg-12 animated bounceInRight "><h1>节气农事歌</h1></article>
+					<article class="col-lg-12  animated bounceInLeft "><h1>节气诗</h1></article>
+					<article class="col-lg-12  animated bounceInRight "><h1>节气谚语</h1></article>
+				</div>
+			</article>
+			<footer class="col-lg-12">
+				<p class="col-lg-8">Copyright © 2013-2018</p>
+				<p class="col-lg-8">粤网文[2017]6527-1578号</p>
+			</footer>
+		</main>
+	</body>
+	<script type="text/javascript">
+		//navbut
+		$(function(){
+			var nav_but_num=0;
+			$(".nav-but").click(function(){
+				if(nav_but_num<2){
+					nav_but_num++;
+				}
+				else{
+					nav_but_num=1;
+				}
+				if(nav_but_num%2==0){
+					$(this).css({
+						"border": "3px white solid",
+						"background-color":"rgba(0,0,0,0)"
+					})
+					}else{
+						$(this).css({
+							"border": "3px grey solid",
+						"background-color":"gainsboro"						
+					})		
+					}
+				$("nav>article").toggle();
+			});
+				$(".but-menu").click(function(){
+				$(".down-menu").slideToggle();
+			});
+				$(".but-menu").mouseleave(function(){
+					$(".down-menu").css({"display":"none"})
+				})
+			
+		})
+		//add animate.css
+		$(function(){
+			$("main>article>div>article").hover(function(){
+				$(this).removeClass('bounceInLeft bounceInRight rotateInUpLeft ').addClass('pulse ');
+	
+			})
+			$("main>article>div>article").mouseleave(function(){
+				$(this).removeClass('pulse');
+			})
+		})
+//		new WOW().init();
+	</script>
+</html>

@@ -1,0 +1,200 @@
+*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			body{
+				height: 100%;
+			}
+			main{
+				text-align: center;
+			}
+			.col-lg-1 {width: 8.33%;}
+			.col-lg-2 {width: 16.66%;}
+			.col-lg-3 {width: 25%;}
+			.col-lg-4 {width: 33.33%;}
+			.col-lg-5 {width: 41.66%;}
+			.col-lg-6 {width: 50%;}
+			.col-lg-7 {width: 58.33%;}
+			.col-lg-8 {width: 66.66%;}
+			.col-lg-9 {width: 75%;}
+			.col-lg-10 {width: 83.33%;}
+			.col-lg-11 {width: 91.66%;}
+			.col-lg-12 {width: 100%;}
+			.col-lg-visibility{display: block;}
+			.col-xs-visibility{display: none;}
+			
+			body{
+				font-family: 幼圆;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			
+			header>nav{
+				position: absolute;
+				z-index: 999;
+				line-height: 50px;
+				height: 50px;			
+			}
+			
+			.logo{
+				float: left;
+				height: 50px;
+				text-align: left;
+				box-sizing: border-box;
+				background: url(../img/logo.png) no-repeat ;
+				background-position: 10%;
+				background-size: contain;
+				padding-left: 20px;
+
+			}
+			nav>article{
+				float:right;
+				text-align: right;
+			}
+			.main-nav{
+				box-sizing: border-box;
+				height: 50px;
+				width: 500px;
+				float: right;
+				text-align: left;
+				margin-right: 50px;
+				
+			}
+			.main-nav>li{
+				float: left;
+			}
+			.main-nav>li a{
+				display: block;
+				margin: 0 15px;
+				color: white;
+				text-shadow: #808080 2px 2px 15px;
+				font-weight: bold;	
+			}
+			.down-menu{
+				text-align: center;
+				border: 1px solid gainsboro;
+				border-radius: 3px;
+				
+			}
+			.down-menu>li{
+				border-bottom: 1px gainsboro solid;
+			}
+			.down-menu>li:last-child{
+				border: none;
+			}
+			.main-nav>li>a:hover,.main-nav>li>ul>li>a:hover{
+				color: #ac8c97 ;
+			}
+			main>footer{
+				height: 50px;
+				box-sizing: border-box;
+				padding-top: 3px;
+				background-color: black;
+				color: white;
+				font-size: 12px;
+				margin-top: 30px;
+			}
+			main>footer>p{
+				margin: 3px auto;
+			}
+
+
+			@media only screen and (max-width:768px ) {
+			
+			.col-xs-1 {width: 8.33%;}
+			.col-xs-2 {width: 16.66%;}
+			.col-xs-3 {width: 25%;}
+			.col-xs-4 {width: 33.33%;}
+			.col-xs-5 {width: 41.66%;}
+			.col-xs-6 {width: 50%;}
+			.col-xs-7 {width: 58.33%;}
+			.col-xs-8 {width: 66.66%;}
+			.col-xs-9 {width: 75%;}
+			.col-xs-10 {width: 83.33%;}
+			.col-xs-11 {width: 91.66%;}
+			.col-xs-12 {width: 100%;}
+			.col-lg-visibility{display: none;}
+			.col-xs-visibility{display: block;}
+			body{
+				font-size: 14px;
+			}
+			nav>article{
+				display: none;
+				overflow:hidden;
+			}
+			nav>article>ul>li{
+			background-color: rgba(0,0,0,.3);
+			margin: 1px 0;
+			}
+			.nav-but{
+				box-sizing: border-box;
+				width: 40px;
+				height: 40px;
+				border: 3px white solid;
+				border-radius: 8px;
+				position: relative;
+				margin-top: 5px;
+				margin-right: 10px;
+				float: right;
+				
+			}
+			.main-nav{
+				margin: 0;
+				float: none;
+			}
+			.nav-but>span{
+				display: block;
+				width: 80%;
+				position: absolute;
+				height: 3px;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: white;
+			}
+			.nav-but>span:first-child{
+				top: 20%;
+			}
+			.nav-but>span:last-child{
+				top: 80%;
+			}
+			.down-menu{
+				box-sizing: content-box !important;
+				background-color: rgba(0,0,0,0.3);
+			}
+			.down-menu>li{
+				text-align: left;
+				box-sizing: border-box;
+				border-bottom: 2px solid ;
+				border-color: rgba(255,255,255,.3);
+			}
+			.down-menu>li:first-child{
+				border-top: 2px solid;
+				border-color: rgba(255,255,255,.3);
+			}
+			.down-menu>li:last-child{
+				border: none;
+			}
+			.main-nav>li:hover .main-nav>li>ul>li{
+				background-color:none;
+				
+			}
+			.main-nav>li:hover li{
+				background-color:rgba(0,0,0,.3)
+			}
+			.main-nav>li:nth-child(2){
+				animation-delay:.05s ;
+			}
+			.main-nav>li:nth-child(3){
+				animation-delay:.1s ;
+			}.main-nav>li:nth-child(4){
+				animation-delay:.15s ;
+			}.main-nav>li:nth-child(5){
+				animation-delay:.2s ;
+			}
+		}
